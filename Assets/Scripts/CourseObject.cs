@@ -14,3 +14,11 @@ public class CourseObject : MonoBehaviour
 {
     [SerializeField] Course course;
 }
+
+public enum CourseType
+{
+    Python,
+    CPlusPlus,
+    CSharp
+}
+
