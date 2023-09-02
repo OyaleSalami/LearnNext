@@ -6,7 +6,6 @@ using UnityEngine;
 public struct Course
 {
     public string hash;
-    public string title;
     public int points;
 }
 
@@ -15,9 +14,10 @@ public class CourseObject : MonoBehaviour
     [SerializeField] Course course;
 }
 
-public enum CourseType
+public enum LangType
 {
     Python,
+    JavaScript,
     CPlusPlus,
     CSharp
 }

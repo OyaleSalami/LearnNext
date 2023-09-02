@@ -7,48 +7,51 @@ using UnityEngine.UI;
 
 public class CourseManager : MonoBehaviour
 {
-    [SerializeField] public List<Course> courses;
+    public List<string> langs; //List of languages
+    public static LangType langType;
 
     [Header("UI Updates")]
-    [SerializeField] Image courseImage;
-    [SerializeField] Text courseTitle;
-    [SerializeField] int courseIndex;
+    [SerializeField] Image langImageDisplay;
+    [SerializeField] Sprite[] langImages;
+    [SerializeField] Text langTitle;
+    [SerializeField] int langIndex;
 
     void Start()
     {
-        courseIndex = 0;
+        langIndex = 0;
+        langType = LangType.Python;
+        UpdateUI();
     }
 
     void UpdateUI()
     {
-        courseTitle.text = courses[courseIndex].title;
+        //Update Images and Text
+        langTitle.text = langs[langIndex];
+        langImageDisplay.sprite = langImages[langIndex];
     }
 
-    public void NextCourse()
+    public void NextLang()
     {
-        courseIndex += 1;
+        langIndex += 1;
 
-        if (courseIndex >= courses.Count)
+        if (langIndex >= langs.Count)
         {
-            courseIndex = courses.Count;
+            langIndex = langs.Count - 1;
         }
+
         UpdateUI();
     }
 
-    public void PrevCourse()
+    public void PrevLang()
     {
-        courseIndex -= 1;
+        langIndex -= 1;
 
-        if (courseIndex <= 0)
+        if (langIndex <= 0)
         {
-            courseIndex = 0;
+            langIndex = 0;
         }
+
         UpdateUI();
-    }
-
-    public void SelectCourse(int index)
-    {
-
     }
 
     public void Achievements()

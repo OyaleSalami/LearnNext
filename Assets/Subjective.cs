@@ -2,33 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Subjective : MonoBehaviour
+public class Subjective : Question
 {
+    public bool answer;
 
-    public bool correct;
-    [SerializeField] bool answer;
-
-    public void AnswerTrue()
-    {
-        if(answer == true)
-        {
-            correct = true;
-        }
-        else
-        {
-            //TODO: Display Help Message
-        }
-    }
-
-    public void AnswerFalse()
-    {
-        if (answer == false)
-        {
-            correct = true;
-        }
-        else
-        {
-            //TODO: Display Help Message
-        }
-    }
+    //public void AnswerQuestion(bool value)
+    //{
+    //    if (value == answer)
+    //    {
+    //        isCorrect = true;
+    //        winPanel.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        //Display Help Message
+    //        helpPanel.SetActive(true);
+    //    }
+    //}
 }
