@@ -14,14 +14,20 @@ public class AchievementObject : MonoBehaviour
     [SerializeField] Image maskedImage; //To show the progress
     [SerializeField] Sprite medal2; //The Level 2 Medal
 
+    private void Start()
+    {
+        CheckProgress();
+        UpdateUI();
+    }
+
     public void CheckProgress()
     {
         if(PlayerPrefs.HasKey(hash) != true) //Achievement has not been registered!
         {
-            SaveAchievement();
+            Debug.Log("Missing Key!");
         }
 
-        progress = PlayerPrefs.GetFloat(hash + "_progress"); //Retrieve the progress
+        progress = PlayerPrefs.GetFloat(hash); //Retrieve the progress
     }
 
     public void SaveAchievement()

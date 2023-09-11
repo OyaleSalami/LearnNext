@@ -54,8 +54,33 @@ public class CourseManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void Achievements()
+    public void LoadCourse(string title)
     {
-        SceneManager.LoadScene("Achievements");
+        SceneManager.LoadScene(title, LoadSceneMode.Single);
+    }
+
+    public void LoadAchievements()
+    {
+        SceneManager.LoadScene("Achievements", LoadSceneMode.Single);
+    }
+
+    public void LoadVariablesLearn()
+    {
+        SceneManager.LoadScene("variables_learn", LoadSceneMode.Single);
+    }
+
+    public void LoadDataTypesLearn()
+    {
+        SceneManager.LoadScene("datatypes_learn", LoadSceneMode.Single);
+    }
+
+    public void LoadVariablesChallenge()
+    {
+        SceneManager.LoadScene("variables_challenge", LoadSceneMode.Single);
+    }
+
+    public void LoadDatatypesChallenge()
+    {
+        SceneManager.LoadScene("datatypes_challenge", LoadSceneMode.Single);
     }
 }

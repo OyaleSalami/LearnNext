@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Info Scene.unity
     guid: 5e565cf9d290dd043a915d2f6cc59929
   - enabled: 1
-    path: Assets/Scenes/Courses/Variables.unity
-    guid: 45e4cc051e616784ea93d65aad425d86
+    path: Assets/Scenes/Learn/datatypes_learn.unity
+    guid: 60cbeea31f256394f997fd19bbfc3388
   - enabled: 1
-    path: Assets/Scenes/Courses/Data Type.unity
-    guid: 06acd4f74c13a7a40b90a03aaa1c3279
+    path: Assets/Scenes/Learn/variables_learn.unity
+    guid: dcad63d6e17a6b44092b13cffec749a4
+  - enabled: 1
+    path: Assets/Scenes/Challenges/datatypes_challenge.unity
+    guid: 95dd107de7741e645a86c2d98433250c
+  - enabled: 1
+    path: Assets/Scenes/Challenges/variables_challenge.unity
+    guid: 45e4cc051e616784ea93d65aad425d86
   m_configObjects: {}

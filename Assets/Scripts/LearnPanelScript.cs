@@ -5,13 +5,15 @@ public class LearnPanelScript : MonoBehaviour
 {
     public void SelectLearnCourse(string hash)
     {
+        Debug.Log("Changed Scene");
+
         if(SceneManager.GetSceneByName(hash) == null)
         {
 
         }
         else
         {
-            SceneManager.LoadScene(hash); //Go to the scene
+            SceneManager.LoadScene(hash, LoadSceneMode.Single); //Go to the scene
         }
     }
 }

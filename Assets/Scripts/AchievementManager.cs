@@ -23,6 +23,6 @@ public class AchievementManager : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
     }
 }
